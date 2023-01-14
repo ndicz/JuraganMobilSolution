@@ -52,7 +52,7 @@ namespace JuraganMobilSolution.Repo
             var suvId = _suvs.Find(s => s.Nopol.Equals(id));
 
             if (suvId is not null)
-            {
+            {   
                 return suvId;
             }
 
@@ -61,7 +61,25 @@ namespace JuraganMobilSolution.Repo
 
         public SUV Update(string id, SUV suv)
         {
-            throw new NotImplementedException();
+            var existSuv = FindById(id);
+            var suvIdx = _suvs.FindIndex(s => s.Nopol.Equals(id));
+
+            if (existSuv is not null)
+            {
+                existSuv.Nopol = suv.Nopol is null ? existSuv.Nopol : suv.Nopol;
+                existSuv.Price = suv.Price.Equals(0) ? existSuv.Price : suv.Price;
+                existSuv.Tax = suv.Tax.Equals(0) ? existSuv.Tax : suv.Tax;
+                existSuv.Seat = suv.Seat.Equals(0) ? existSuv.Seat : suv.Seat;
+                existSuv.Year = suv.Year.Equals(0) ? existSuv.Year : suv.Year;
+                existSuv.Trans = suv.Trans.Equals(1 / 1 / 0001) ? existSuv.Trans : suv.Trans;
+                existSuv.Rent = suv.Rent.Equals(0) ? existSuv.Rent : suv.Rent;
+                existSuv.Driver = suv.Rent.Equals(0) ? existSuv.Driver : suv.Driver;
+
+                _suvs[suvIdx] = existSuv;
+
+                return existSuv;
+            }
+            return existSuv;
         }
     }
 }

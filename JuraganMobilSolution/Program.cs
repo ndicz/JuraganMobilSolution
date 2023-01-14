@@ -19,10 +19,17 @@ namespace JuraganMobil
             var repoManager = new RepoManager();
 
 
-            //----------------- FindAll ----------------
-            var findAllSuv = repoManager.Suv.FindAll();
-            foreach (var s in findAllSuv)
-                Console.WriteLine(s);
+
+
+            //-------------------------SUV-------------------------------------------//
+
+            //----------------- FindAll ----------------    
+            //var findAllSuv = repoManager.Suv.FindAll();
+            //foreach (var s in findAllSuv)
+            //    Console.WriteLine(s);
+
+            //Taxi.Count();
+            //Console.WriteLine($"Jumlah Taxi {Taxi.Count()}");
 
             //----------------- Create ----------------
             //var createSuv = repoManager.Suv.Create(new Suv("P 1999 DK", "2010", 350000000M, 3500000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M));
@@ -30,16 +37,20 @@ namespace JuraganMobil
             //    Console.WriteLine(suv);
 
             //----------------- FindById --------------
-            //BaseVehicle findSuv = repoManager.Suv.FindById("D 1001 UM");
-            //Console.WriteLine(findSuv);
+            Vehicle findSuv = repoManager.Suv.FindById("D 1001 UM");
+            Console.WriteLine(findSuv);
 
             //----------------- Update ----------------
-            //var updateSuv = repoManager.Suv.Update("D 1001 UM", new Suv("P 1111 DK", "2010", 350000000M, 3500000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M));
+            //var updateSuv = repoManager.Suv.Update("D 1001 UM", new SUV("D 1001234 UM", 2010, 35000_0000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M));
             //Console.WriteLine(updateSuv);
 
             //----------------- Delete ----------------
-            //var deleteSuv = repoManager.Suv.Delete("D 1003 UM");
-            //Console.WriteLine($"Deleted Row : {deleteSuv}")
+            //var deleteSuv = repoManager.Suv.Delete("D 1001 UM");
+            //Console.WriteLine($"Deleted Row : {deleteSuv}");
+
+            //-------------------------TAXI-------------------------------------------//
+
+            //-------------------------JET -------------------------------------------//
         }
     }
 }

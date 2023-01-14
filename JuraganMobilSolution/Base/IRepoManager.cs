@@ -10,5 +10,7 @@ namespace JuraganMobilSolution.Base
     interface IRepoManager
     {
         public ISuvRepo Suv { get; }
+        public ITaxiRepo taxi { get; }  
+        public IPrivateJetRepo privateJet { get; }
     }
 }

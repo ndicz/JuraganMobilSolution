@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace JuraganMobilSolution.Repo
 {
-   internal interface ITaxiRepo
+   internal interface IPrivateJetRepo
     {
-        List<Taxi> FindAll();
-        Taxi FindById(string id);
-        List<Taxi> Create(Taxi taxi);
-        Taxi Update(string id, Taxi  taxi);
+        List<PrivateJet> FindAll();
+        PrivateJet FindById(string id);
+        List<PrivateJet> Create(PrivateJet privateJet);
+        PrivateJet Update(string id, PrivateJet privateJet);
         int Delete(string id);
+
     }
 }

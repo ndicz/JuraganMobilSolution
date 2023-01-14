@@ -12,8 +12,8 @@ namespace JuraganMobilSolution.Model
         private decimal rent;
         private decimal driver;
 
-        private decimal Rent { get => rent; set => rent = value; }
-        private decimal Driver { get => driver; set => driver = value; }
+        public decimal Rent { get => rent; set => rent = value; }
+        public decimal Driver { get => driver; set => driver = value; }
         public SUV(string nopol, int year, decimal price, int seat, DateOnly trans, decimal rent, decimal driver) : base(nopol, year, price, seat, trans)
         {
             Rent = rent;

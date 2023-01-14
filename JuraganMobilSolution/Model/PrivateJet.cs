@@ -23,7 +23,7 @@ namespace JuraganMobilSolution.Model
         public override string? ToString()
         {
             return
-             $"No Police         :{Nopol} \n" +
+                $"No Police         :{Nopol} \n" +
                 $"Year              :{Year}\n" +
                 $"Vehicle Type      :Private Jet\n" +
                 $"Price             :{Price}\n" +

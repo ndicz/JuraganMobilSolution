@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,8 @@ namespace JuraganMobilSolution.Base
 
     {
         private ISuvRepo _suv;
+        private ITaxiRepo _taxi;
+        private IPrivateJetRepo _privateJet;
 
         public ISuvRepo Suv
         {
@@ -22,5 +25,28 @@ namespace JuraganMobilSolution.Base
                 return _suv;
             }
         }
+
+        public ITaxiRepo taxi
+        {
+
+            get
+            {
+                if (_taxi is null)
+                    _taxi = new TaxiRepo();
+                return _taxi;
+            }
+        }
+
+        public IPrivateJetRepo privateJet
+        {
+
+            get
+            {
+                if (_privateJet is null)
+                    _privateJet = new PrivateJetRepo();
+                return  _privateJet;
+            }
+        }
+
     }
 }
