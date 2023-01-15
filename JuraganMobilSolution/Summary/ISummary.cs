@@ -13,7 +13,7 @@ namespace JuraganMobilSolution.Summary
 
         int GetTotalVehicle(string Vehicle);
 
-        decimal GetTotalIncome(decimal Vehicle);
+        decimal GetTotalIncome(string Vehicle);
 
     }
 }

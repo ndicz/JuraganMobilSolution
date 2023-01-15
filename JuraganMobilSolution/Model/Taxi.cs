@@ -9,7 +9,7 @@ namespace JuraganMobilSolution.Model
     internal class Taxi : Vehicle
 
     {
-
+        static decimal Totalincome;
         static int count = 0;
         private decimal order;
         private decimal orderKm;
@@ -24,12 +24,17 @@ namespace JuraganMobilSolution.Model
             Order = order;
             OrderKm = orderkm;
             Total = order * orderkm;
+            Totalincome += Total;
             count++;
         }
 
         public static int Count()
         {
             return count;
+        }
+        public static decimal Tot()
+        {
+            return Totalincome;
         }
 
         public override string? ToString()

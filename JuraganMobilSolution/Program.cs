@@ -1,4 +1,4 @@
-﻿
+﻿       
 using JuraganMobilSolution.Base;
 using JuraganMobilSolution.Model;
 using JuraganMobilSolution.Summary;
@@ -35,9 +35,9 @@ namespace JuraganMobil
             //GetTotalVehicle()
 
 
-            var gettot = repoManager.summary.GetTotalIncomeVehicle();
+            var result = repoManager.summary.GetTotalIncomeVehicle();
 
-            Console.WriteLine($"JUMLAH KENDARAAN = {gettot}");
+            Console.WriteLine("JUMLAH KENDARAAN = {0:n0}", result);
 
 
 

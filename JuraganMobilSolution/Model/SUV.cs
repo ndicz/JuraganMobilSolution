@@ -11,7 +11,7 @@ namespace JuraganMobilSolution.Model
     {
          
         static decimal Totalincome;
-        static int count;
+        static int count = 0;
         private decimal rent;
         private decimal driver;
 

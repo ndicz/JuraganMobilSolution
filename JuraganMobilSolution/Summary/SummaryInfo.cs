@@ -16,14 +16,15 @@ namespace JuraganMobilSolution.Summary
 
 
         }
-        public decimal GetTotalIncome(decimal Vehicle)
+        public decimal GetTotalIncome(string Vehicle)
         {
-            throw new NotImplementedException();
+            return Vehicle == "Taxi" ? Taxi.Tot() : Vehicle == "PrivateJet" ? PrivateJet.Tot() : Vehicle == "SUV" ? SUV.Tot() : 0;
         }
 
         public decimal GetTotalIncomeVehicle()
         {
-            return SUV.Tot();
+           
+            return SUV.Tot() + Taxi.Tot() + PrivateJet.Tot();
         }
 
         public int GetTotalVehicle()
