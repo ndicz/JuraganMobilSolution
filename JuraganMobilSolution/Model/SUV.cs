@@ -9,6 +9,9 @@ namespace JuraganMobilSolution.Model
     internal class SUV : Vehicle
 
     {
+         
+        static decimal Totalincome;
+        static int count;
         private decimal rent;
         private decimal driver;
 
@@ -19,7 +22,19 @@ namespace JuraganMobilSolution.Model
             Rent = rent;
             Driver = driver;
             Total = rent + driver;
+            Totalincome += Total;
+            count++;
         }
+        public static int Count()
+        {
+            return count;
+        }
+
+        public static decimal Tot()
+        {
+            return Totalincome;
+        }
+
 
 
         public override string? ToString()

@@ -1,6 +1,7 @@
 ﻿
 using JuraganMobilSolution.Base;
 using JuraganMobilSolution.Model;
+using JuraganMobilSolution.Summary;
 
 //Taxi data = new("N 4881 GF", 2012, 3_000_000, 5,new DateOnly(2023, 10, 23), 500_000, 50_000);
 
@@ -24,9 +25,21 @@ namespace JuraganMobil
             //-------------------------SUV-------------------------------------------//
 
             //----------------- FindAll ----------------    
-            //var findAllSuv = repoManager.Suv.FindAll();
-            //foreach (var s in findAllSuv)
-            //    Console.WriteLine(s);
+            var findAllSuv = repoManager.Suv.FindAll();
+            var findalljet = repoManager.privateJet.FindAll();
+            var findalltaxi = repoManager.taxi.FindAll();
+            foreach (var s in findAllSuv) ;
+            foreach (var s in findalltaxi) ;
+            foreach (var s in findalljet) ;
+            //Console.WriteLine(s);
+            //GetTotalVehicle()
+
+
+            var gettot = repoManager.summary.GetTotalIncomeVehicle();
+
+            Console.WriteLine($"JUMLAH KENDARAAN = {gettot}");
+
+
 
             //Taxi.Count();
             //Console.WriteLine($"Jumlah Taxi {Taxi.Count()}");
@@ -37,8 +50,8 @@ namespace JuraganMobil
             //    Console.WriteLine(suv);
 
             //----------------- FindById --------------
-            Vehicle findSuv = repoManager.Suv.FindById("D 1001 UM");
-            Console.WriteLine(findSuv);
+            //Vehicle findSuv = repoManager.Suv.FindById("D 1001 UM");
+            //Console.WriteLine(findSuv);
 
             //----------------- Update ----------------
             //var updateSuv = repoManager.Suv.Update("D 1001 UM", new SUV("D 1001234 UM", 2010, 35000_0000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M));

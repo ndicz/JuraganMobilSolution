@@ -1,4 +1,5 @@
 ﻿using JuraganMobilSolution.Repo;
+using JuraganMobilSolution.Summary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace JuraganMobilSolution.Base
         public ISuvRepo Suv { get; }
         public ITaxiRepo taxi { get; }  
         public IPrivateJetRepo privateJet { get; }
+        public ISummary summary { get; }
     }
 }

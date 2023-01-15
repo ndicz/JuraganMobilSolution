@@ -8,5 +8,12 @@ namespace JuraganMobilSolution.Summary
 {
     internal interface ISummary
     {
+        int GetTotalVehicle();
+        decimal GetTotalIncomeVehicle();
+
+        int GetTotalVehicle(string Vehicle);
+
+        decimal GetTotalIncome(decimal Vehicle);
+
     }
 }

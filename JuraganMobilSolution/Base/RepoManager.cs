@@ -1,4 +1,5 @@
 ﻿using JuraganMobilSolution.Repo;
+using JuraganMobilSolution.Summary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace JuraganMobilSolution.Base
         private ISuvRepo _suv;
         private ITaxiRepo _taxi;
         private IPrivateJetRepo _privateJet;
+        private ISummary _summary;
 
         public ISuvRepo Suv
         {
@@ -48,5 +50,13 @@ namespace JuraganMobilSolution.Base
             }
         }
 
+        public ISummary summary
+        {
+            get {
+                if (_summary is null)
+                    _summary = new SummaryInfo();
+                return _summary;
+            }
+        }
     }
 }

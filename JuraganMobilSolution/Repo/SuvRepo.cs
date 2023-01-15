@@ -16,7 +16,7 @@ namespace JuraganMobilSolution.Repo
         public SuvRepo()
         {
             _suvs = new List<SUV>{
-                new SUV("D 1001 UM", 2010, 35000_0000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M)
+                new SUV("D 1001 UM", 2010, 35000_0000M, 4, new DateOnly(2023, 01, 10), 500000M, 50000M)
                ,new SUV("D 1002 UM", 2010, 350000000M, 4, new DateOnly(2023, 01, 10), 500000M, 150000M)
                ,new SUV("D 1003 UM", 2015, 350000000M, 5, new DateOnly(2023, 01, 12), 500000M, 150000M)
                ,new SUV("D 1004 UM", 2015, 350000000M, 5, new DateOnly(2023, 01, 13), 500000M, 150000M)

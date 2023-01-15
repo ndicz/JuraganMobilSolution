@@ -8,6 +8,8 @@ namespace JuraganMobilSolution.Model
 {
     internal class PrivateJet : Vehicle
     {
+
+        static int count;
         private decimal driver;
         private decimal rent;
 
@@ -18,7 +20,14 @@ namespace JuraganMobilSolution.Model
             Rent = rent;
             Driver = driver;
             Total = rent + driver;
+            count++;
         }
+
+        public static int Count()
+        {
+            return count;
+        }
+
 
         public override string? ToString()
         {
